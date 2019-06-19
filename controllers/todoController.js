@@ -11,6 +11,7 @@ res.render('todo',{todos:data});
     });
 
     app.post('/todo',urlencodedParser,function(req,res){
+        console.log('body',req.body)
         data.push(req.body);
         res.json(data);
     });
